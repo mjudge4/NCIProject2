@@ -169,25 +169,25 @@ def load_file(offering_id):
 # https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/vision/cloud-client/detect/detect.py
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>')
 def uploaded_file(offering_id, file_id):
-    file = session.query(File).filter_by(id=file_id).one()
-    return render_template('uploadedfile.html', file=file, file_id=file_id, offering_id=offering_id)
+    pic = session.query(File).filter_by(id=file_id).one()
+    return render_template('uploadedfile.html', pic=pic, file_id=file_id, offering_id=offering_id)
 
 
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>/analyze')
 def analyze_file(offering_id, file_id):
-    offering = session.query(Offering).filter_by(id=offering_id).one()
-    file = session.query(File).filter_by(id=file_id).one()
+    #offering = session.query(Offering).filter_by(id=offering_id).one()
+    pic = session.query(File).filter_by(id=file_id).one()
 
     client = vision.ImageAnnotatorClient()
     image = types.Image()
-    image.source.image_uri = file.image
+    image.source.image_uri = pic.image
 
     response = client.label_detection(image=image)
     labels = response.label_annotations
 
     for label in labels:
         if label.description in COLOURS:
-            newTag = Tag(tag_name=label.description, offering_id=offering.id)
+            newTag = Tag(tag_name=label.description, offering_id=offering_id)
             session.add(newTag)
             session.commit()
 
@@ -195,7 +195,7 @@ def analyze_file(offering_id, file_id):
     logos = response2.logo_annotations
 
     for logo in logos:
-        newTag = Tag(tag_name=logo.description, offering_id=offering.id)
+        newTag = Tag(tag_name=logo.description, offering_id=offering_id)
         session.add(newTag)
         session.commit()
 
@@ -205,12 +205,11 @@ def analyze_file(offering_id, file_id):
     if annotations.web_entities:
         for entity in annotations.web_entities:
             if entity.score > 0.68:
-                newTag = Tag(tag_name=entity.description, offering_id=offering.id)
+                newTag = Tag(tag_name=entity.description, offering_id=offering_id)
                 session.add(newTag)
                 session.commit()
                 tags = session.query(Tag).filter_by(offering_id=offering_id).all()
-        return render_template('analyzedfile.html', tags=tags, file_id=file_id, offering_id=offering_id)
-
+    return render_template('analyzedfile.html', pic=pic, tags=tags, file_id=file_id, offering_id=offering_id)
 
 # http://flask.pocoo.org/docs/0.12/patterns/fileuploads/
 # Return uploaded file code from Flask docs
