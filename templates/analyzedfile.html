@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Tags</title>
+    <style>
+        /* Remove the navbar's default rounded borders and increase the bottom margin */
+        .navbar {
+            margin-bottom: 50px;
+            border-radius: 0;
+        }
+
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        .panel-body img {
+            height : 450px
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+{% include "jumbotron.html" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            Tag Titles Found:
+
+            <div class="btn-group-vertical">
+
+                {% for tag in tags %}
+
+                    <button type="button" class="btn btn-info">
+                        <span>{{ tag.tag_name}}</span>
+                    </button>
+                {% endfor %}
+            </div>
+
+
+        </div>
+        <div class="col">
+            <div class="row h-100 justify-content-left align-items-center">
+                <a class="btn btn-primary btn-lg" href="{{url_for('offeringDetail', offering_id = offering_id)}}">
+                    <h3>View Offering</h3>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

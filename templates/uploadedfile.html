@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Tags</title>
+    <style>
+        /* Remove the navbar's default rounded borders and increase the bottom margin */
+        .navbar {
+            margin-bottom: 50px;
+            border-radius: 0;
+        }
+
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        .col-sm img {
+            height : 400px
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            document.getElementById("progress").style.display = "block";
+        }
+    </script>
+
+</head>
+<body>
+
+{% include "jumbotron.html" %}
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-sm">
+
+            <img src ="{{ file.image }}">
+
+        </div>
+        <div class="col">
+            <div class="row h-100 justify-content-center align-items-center">
+                <a class="btn btn-primary btn-lg" href="{{url_for('analyze_file', offering_id=offering_id,
+                 file_id=file_id)}}" onclick="myFunction()">
+                    <h3>Analyze Offering for Tags</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div id="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            Analyzing File
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>
+

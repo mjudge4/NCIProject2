@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Upload Image</title>
+</head>
+<body>
+{% include "jumbotron.html" %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-success">
+        <ul>
+            {% for message in messages %}
+                <li><strong>{{ message }}</strong></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <h1>Upload Image</h1>
+            <div class="input-group">
+                <div class="card">
+                    <form method=post enctype=multipart/form-data>
+                        <input type=file name=file >
+
+                </div>
+                <div class="input-group-append">
+                    <input type=submit value=Upload onclick="myFunction()">
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("progress").style.display = "block";
+        }
+    </script>
+
+    <div id="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            Uploading File
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

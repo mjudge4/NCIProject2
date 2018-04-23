@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script src="//apis.google.com/js/platform.js?onload=start"> </script>
+    <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+</head>
+
+{% include "jumbotron.html" %}
+
+
+<body class="container">
+
+<div class="row justify-content-center align-items-center">
+    <div class="row">
+        <div class="col">
+            <!-- GOOGLE PLUS SIGN IN-->
+
+            <div id="signinButton" class="offset6"">
+            <span class="g-signin"
+                  data-scope="openid email"
+                  data-clientid="585988940161-glf382elu22pvr84d1ss7j1p1fg76ltp.apps.googleusercontent.com"
+                  data-redirecturi="postmessage"
+                  data-accesstype="offline"
+                  data-cookiepolicy="single_host_origin"
+                  data-callback="signInCallback"
+                  data-approvalprompt="force">
+          </span>
+        </div>
+    </div>
+
+
+    <div id="result"></div>
+
+    <script>
+        function signInCallback(authResult) {
+            if (authResult['code']) {
+                // sign-in button is hidden now that the user is authorized
+                $('#signinButton').attr('style', 'display: none');
+                // Send the unique use code to the server, and write a 'login successful' message if successful. Then redirect back to home page
+                $.ajax({
+                    type: 'POST',
+                    url: '/gconnect?state={{STATE}}',
+                    processData: false,
+                    data: authResult['code'],
+                    contentType: 'application/octet-stream; charset=utf-8',
+                    success: function(result) {
+                        // Handle or verify the server's response.
+                        if (result) {
+                            $('#result').html('Welcome back!</br>'+ result + '</br>Redirecting to home page...')
+                            setTimeout(function() {
+                                window.location.href = "/offerings/";
+                            }, 4000);
+
+                        } else if (authResult['error']) {
+                            console.log('There was an error: ' + authResult['error']);
+                        } else {
+                            $('#result').html('Server-side call failed. Check your configuration and console.');
+                        }
+                    }
+
+                }); } }
+    </script>
+
+    <!--END GOOGLE PLUS SIGN IN -->
+
+
+    <!--Facebook SIGN IN -->
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '720131888195879',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v2.12'
+            });
+
+
+
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function sendTokenToServer() {
+            var access_token = FB.getAuthResponse()['accessToken'];
+            console.log(access_token)
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+                console.log('Successful login for: ' + response.name);
+                $.ajax({
+                    type: 'POST',
+                    url: '/fbconnect?state={{STATE}}',
+                    processData: false,
+                    data: access_token,
+                    contentType: 'application/octet-stream; charset=utf-8',
+                    success: function(result) {
+                        // Handle or verify the server response if necessary.
+                        if (result) {
+                            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+                            setTimeout(function() {
+                                window.location.href = "/offerings/";
+                            }, 4000);
+
+                        } else {
+                            $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+                        }
+                    }
+
+                });
+            });
+        }
+
+    </script>
+
+
+
+    <div class="col">
+
+        <fb:login-button class="btn-facebook" scope="public_profile,email" onlogin="sendTokenToServer();">
+            <a href='javascript:sendTokenToServer()'>Login with Facebook</a>
+
+        </fb:login-button>
+
+    </div>
+
+    <!--END FACEBOOK SIGN IN -->
+
+</div>
+</body>
+
+</html>

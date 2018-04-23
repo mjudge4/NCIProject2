@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Social Media Icons from W3 schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Offerings by {{ tag.tag_name }}</title>
+</head>
+<body>
+{% include "jumbotron.html" %}
+{% include "header.html" %}
+<div class="container">
+
+    <div class="row">
+        {% for i in taglist %}
+            {% if tag.tag_name == i.tag_name  %}
+                <div class ="col-sm-4">
+
+                <div class="card">
+                <div class="card-img-top">
+                    {% for file in files %}
+                        {% if i.offering_id == file.offering_id %}
+                            <a href="{{url_for('offeringDetail', offering_id = i.offering_id)}}">
+                                {% if file.image is none %}
+                                    <img src ="{{ url_for('static', filename="No_Image_Available.jpg") }}" class="img-responsive" style="width:100%" style="height:100%" alt="Image">
+                                {% else %}
+                                    <img src ="{{file.image}}" class="img-responsive" style="width:100%" style="height:100%" alt="Image">
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="card-title">
+                    <a href="{{url_for('offeringDetail', offering_id = i.offering_id)}}">
+                        <h1>{{ i.offering.title }}</h1>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class ="col">
+                        <div class="card-title"><p>Posted: {{i.offering.date}}</p> </div>
+                    </div>
+                    <div class ="col">
+                        <div class="card-title"><a href="{{ url_for('offeringLocation', offering_location=i.location) }}">{{i.offering.location}}</a></div>
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+        {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+</body>
+</html>

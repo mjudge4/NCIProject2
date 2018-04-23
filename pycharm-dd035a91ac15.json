@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pycharm-194111",
+  "private_key_id": "dd035a91ac15cd932b853973570e6507d59b6f10",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDWiszMBaq58ban\nDl4BMvJ3yTfBWSBPnFRx9nJC9mWghOz/oN3bbz9vSS9+UIPXk7EhRRWo4bW24DwB\nfKctlfR/XlpMp6Jq1Eb1iH4uyUOlGfrFFxvqFGcKZK9buO+uvc/oGjY0CMp38B9q\nULb/yl1b0jFOo38vlR7yyp9zZVxCe2Cgj7PLfWqAKbKzkoPuiEdX1bBbr94ryT3+\nlV+FCqFiy8r+hpz1N37gywmmbEuNkqdt7HlpJg7EWAWxIi3DFx0TgoISCW3U6J43\n+HwGFczbKub1spGkqI4jZct412ff9ZwQ0cKa2lUFnWsfxWA0P2Xbx+km2y56n/UV\n2p0MDecRAgMBAAECggEADRqvRar28aKc+Hk9Lq+Q9dYZjLrH6XTwB4H5GrP4IyTb\nYQXPZ07VPhPnTbzXQLyprhGNMCKROdlacPDPOU6Wf40g0NvQZNwQdYDfzDXI5vW+\nRnmR3+tdG9poh561LSQ05cVsGCONUmQdVx4U/2y55RjioB4Gb76ZBFVyBddkGj9Y\nTOGf35OXw4zI7+hJeMMV/4WVHN3Mlna9lLPGHJo04BKKHK3yUCu99RuX6ELMKDsz\nQ6ndOVA6rZznFjAdcMctou+I8zTHV1moDp7rvXdV+lf80gQ1S7/bfv2BpZW+mICe\nTp2ELKix9qJANMnQj3ReO8JgZlc2NgJ7QLEKlPimAQKBgQD3SzgUzCUKbg2an+Q4\nAi+UCi55+ciP2WcblCxauuW58PMpNA7s5O1tJkFnZw3YBK+w91J6wxs9Y5URSs2D\ne6qSv0pwLZW/Da2ZjW1IetqItVBUXIgma7XNQT7VKSQSH9sINGdTmTULVX2P6lrz\nIrCCOQHD9WVtp9JtUpKxmHgOYQKBgQDeGGaZ/w9BntVEm2/Ki40oCndmUVh41UWs\nRJeGE5rNFCFFC+L/7qWj7sBP0pr8tcIPSQ8521lqXIDpVIoGYHQfxxDf5gELsTsv\nHNPT6SwUx6eXpndE6vsdj0UrtJeBGBaPj69Ca6+8dfp0XwwTEiNn4WhyBIbLCqcU\nEAEr2bO2sQKBgQCYf/Nqp+Xjw7Bx/U5A1+A9W/YDVG1BgGEcWcjsfrsyaouZijf2\nEMr195R3zs5zu5gY+rwLZoxC1ElWK5oHDllHO94MxZ/F/QpkWhndi51+lsmd7J4t\ni1jG5gh4bXGIF8r8CUz6+c0DW0oeWPiTXX4aIEuda5SMBeU3c6dxC8RloQKBgGaz\n3e5klkeADZs2TdHaCqJzhJdaEpF9/kQVTASCWFlxb5kgUA6N6ycNpvzCpU0rN9wd\nqt7UYlre//XmVBVy0QBI67K+B8nCYV399K7P6sSJNyTXo9vI1errb88wKcdWvkgQ\n57jNV2zNGc5qjYjcIGdPQx9GnJaUDIMoi4IdoA9hAoGBAJZXTUEe+sxI3YTkcxBL\nZ0PJnLQMl6qTTvk++aNEQejoO25u5kr6W/FfVZGhYGo/IYFuP2hKfWOybMk+uvZR\n7E4YJLh8ha9LX1PhThlvrOgWHMQO1WTLJH60AR17DpfTMDM0bwBcnEyFuVN/ejYr\n47un0+Y7tfk482pzU8uev6Fy\n-----END PRIVATE KEY-----\n",
+  "client_email": "myserviceaccount@pycharm-194111.iam.gserviceaccount.com",
+  "client_id": "100198294304039400544",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/myserviceaccount%40pycharm-194111.iam.gserviceaccount.com"
+}

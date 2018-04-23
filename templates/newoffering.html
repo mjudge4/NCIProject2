@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <title>New Offering</title>
+</head>
+
+<body>
+{% include "jumbotron.html" %}
+{% include "header.html" %}
+<div class="container">
+    <h1>New Offering</h1>
+
+    <form id="newoff" ​class="form-horizontal" action="#" method='POST'>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="validationDefault01">Title:</label>
+            <div class="col-sm-10">
+                <input type='text' size='30' name='title' class="form-control" id="validationDefault01"
+                       placeholder="Enter Offering Title" required>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="validationDefault02">Your Location:</label>
+            <div class="col-sm-10">
+                <select name="location" id="validationDefault02" class="form-control" required>
+                    <option value="">Select County</option>
+                    <option value="dublin south">Dublin, South</option>
+                    <option value="dublin north">Dublin, North
+                    <option value="antrim">Antrim</option>
+                    <option value="armagh">Armagh</option>
+                    <option value="carlow">Carlow</option>
+                    <option value="cavan">Cavan</option>
+                    <option value="clare">Clare</option>
+                    <option value="cork">Cork</option>
+                    <option value="derry">Derry</option>
+                    <option value="donegal">Donegal</option>
+                    <option value="down">Down</option>
+                    <option value="fermanagh">Fermanagh</option>
+                    <option value="galway">Galway</option>
+                    <option value="kerry">Kerry</option>
+                    <option value="kildare">Kildare</option>
+                    <option value="kilkenny">Kilkenny</option>
+                    <option value="laois">Laois</option>
+                    <option value="leitrim">Leitrim</option>
+                    <option value="limerick">Limerick</option>
+                    <option value="longford">Longford</option>
+                    <option value="louth">Louth</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="meath">Meath</option>
+                    <option value="monaghan">Monaghan</option>
+                    <option value="offaly">Offaly</option>
+                    <option value="roscommon">Roscommon</option>
+                    <option value="sligo">Sligo</option>
+                    <option value="tipperary">Tipperary</option>
+                    <option value="tyrone">Tyrone</option>
+                    <option value="waterford">Waterford</option>
+                    <option value="westmeath">Westmeath</option>
+                    <option value="wexford">Wexford</option>
+                    <option value="wicklow">Wicklow</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type='submit' class="btn btn-default">Create</button>
+            </div>
+        </div>
+    </form>
+</div>
+</br>
+<a href='{{url_for('offering')}}'><button type="button" class="btn btn-secondary btn-lg btn-block">Back</button></a>
+
+</body>
+</html>

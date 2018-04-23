@@ -1,0 +1,70 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.6" />
+            <item index="2" class="java.lang.String" itemvalue="3.7" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="46">
+            <item index="0" class="java.lang.String" itemvalue="ipaddress" />
+            <item index="1" class="java.lang.String" itemvalue="pathspec" />
+            <item index="2" class="java.lang.String" itemvalue="protobuf" />
+            <item index="3" class="java.lang.String" itemvalue="request" />
+            <item index="4" class="java.lang.String" itemvalue="tabulate" />
+            <item index="5" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="6" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="7" class="java.lang.String" itemvalue="SQLAlchemy" />
+            <item index="8" class="java.lang.String" itemvalue="cffi" />
+            <item index="9" class="java.lang.String" itemvalue="httplib2" />
+            <item index="10" class="java.lang.String" itemvalue="bottle" />
+            <item index="11" class="java.lang.String" itemvalue="pycparser" />
+            <item index="12" class="java.lang.String" itemvalue="python-slugify" />
+            <item index="13" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="14" class="java.lang.String" itemvalue="websocket-client" />
+            <item index="15" class="java.lang.String" itemvalue="Flask-Cloudy" />
+            <item index="16" class="java.lang.String" itemvalue="semantic-version" />
+            <item index="17" class="java.lang.String" itemvalue="apache-libcloud" />
+            <item index="18" class="java.lang.String" itemvalue="awsebcli" />
+            <item index="19" class="java.lang.String" itemvalue="docopt" />
+            <item index="20" class="java.lang.String" itemvalue="post" />
+            <item index="21" class="java.lang.String" itemvalue="public" />
+            <item index="22" class="java.lang.String" itemvalue="backports.ssl-match-hostname" />
+            <item index="23" class="java.lang.String" itemvalue="pyOpenSSL" />
+            <item index="24" class="java.lang.String" itemvalue="docker-py" />
+            <item index="25" class="java.lang.String" itemvalue="dockerpty" />
+            <item index="26" class="java.lang.String" itemvalue="get" />
+            <item index="27" class="java.lang.String" itemvalue="docutils" />
+            <item index="28" class="java.lang.String" itemvalue="botocore" />
+            <item index="29" class="java.lang.String" itemvalue="Werkzeug" />
+            <item index="30" class="java.lang.String" itemvalue="asn1crypto" />
+            <item index="31" class="java.lang.String" itemvalue="query-string" />
+            <item index="32" class="java.lang.String" itemvalue="cryptography" />
+            <item index="33" class="java.lang.String" itemvalue="MySQL-python" />
+            <item index="34" class="java.lang.String" itemvalue="simplejson" />
+            <item index="35" class="java.lang.String" itemvalue="jmespath" />
+            <item index="36" class="java.lang.String" itemvalue="lockfile" />
+            <item index="37" class="java.lang.String" itemvalue="termcolor" />
+            <item index="38" class="java.lang.String" itemvalue="cement" />
+            <item index="39" class="java.lang.String" itemvalue="Unidecode" />
+            <item index="40" class="java.lang.String" itemvalue="colorama" />
+            <item index="41" class="java.lang.String" itemvalue="virtualenv" />
+            <item index="42" class="java.lang.String" itemvalue="grpcio" />
+            <item index="43" class="java.lang.String" itemvalue="pyjwt" />
+            <item index="44" class="java.lang.String" itemvalue="twilio" />
+            <item index="45" class="java.lang.String" itemvalue="google-cloud-core" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

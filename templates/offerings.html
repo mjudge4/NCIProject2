@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/offerings.js') }}"></script>
+    <title>BabiesGrow</title>
+    <style>
+
+
+
+        .card-img-top img {
+            height : 380px
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+        .container text-center {
+            padding: 50px;
+        }
+
+        .card-title {
+            padding-left: 10px;
+        }
+
+        .row {
+            padding: 5px;
+        }
+        .btn btn-primary btn-block {
+            margin-bottom: 20px;
+
+        }
+
+    </style>
+
+
+<body>
+{% include "jumbotron.html" %}
+{% include "header.html" %}
+
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-success">
+        <ul>
+            {% for message in messages %}
+                <li><strong>{{ message }}</strong></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+</div>
+
+<main>
+
+
+    <div class="container">
+        <div class="card">
+            <a href = '{{url_for('newOffering') }}' class="btn btn-primary btn-block" role="button">Add New Offering</a>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+        <div class="row">
+            {% for i in offerings %}
+                <div class ="col-sm-4">
+                    <div class="card">
+                        <div class="card-img-top">
+                            {% for file in files if i.id == file.offering_id %}
+                                <a href="{{url_for('offeringDetail', offering_id = i.id)}}">
+                                    {% if loop.index == 1 %}
+                                        <img src ="{{file.image|e}}" class="img-responsive" style="width:100%" style="height:100%" alt="Image">
+                                    {% endif %}
+                                </a>
+                            {% endfor %}
+                        </div>
+
+                        <div class="card-title">
+                            <a href="{{url_for('offeringDetail', offering_id = i.id)}}"><h4>{{i.title}} </h4></a>
+                        </div>
+                        <div class="row">
+                            <div class ="col">
+                                <div class="card-title"><p>Posted: {{i.date}}</p> </div>
+                            </div>
+                            <div class ="col">
+                                <div class="card-title"><a href="{{ url_for('offeringLocation', offering_location=i.location) }}">
+                                    {{i.location}}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    </div>
+</main>
+
+{% include "footer.html" %}
+</body>
+</html>

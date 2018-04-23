@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Delete</title>
+</head>
+{% include "header.html" %}
+<body>
+<div class="container">
+    <div class="form-group">
+        <div class="card text-center" >
+            <div class="card-title">Are you sure you want to delete<h1> {{offering.title}}? </h1></div>
+            <button type="button" class="btn btn-danger">
+                <form action="{{ url_for('deleteOffering', offering_id = offering.id) }}" method="POST">
+                    <input type="submit", value = 'Delete'>
+                </form>
+            </button>
+
+            <a class="btn btn-secondary" href='{{url_for('offeringDetail',offering_id = offering.id)}}'>Back</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

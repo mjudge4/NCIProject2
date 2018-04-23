@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <title>Edit</title>
+</head>
+<body>
+<div class="container">
+    <h1>Edit Offering</h1>
+
+    <form class="form-horizontal" action="{{ url_for('editOffering', offering_id=offering.id) }}" method="POST">
+        <div class="form-group">
+
+            <label class="control-label col-sm-2" for="title">Title:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" size="30" name='title' placeholder="{{ offering.title }}">
+
+                <input class="btn btn-warning" type="submit" value="Edit">
+            </div>
+        </div>
+    </form>
+    </br>
+    <a class="btn btn-secondary" href='{{url_for('offeringDetail',offering_id = offering.id)}}'>Back</a>
+</div>
+</body>
+
+</body>
+</html>
