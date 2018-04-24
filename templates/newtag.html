@@ -2,15 +2,36 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <meta charset="UTF-8">
+    <style>
+        .card {
+            background-color: black;
+        }
+        .card-body h2 {
+            color: white;
+        }
+
+    </style>
     <title>New Tag</title>
 </head>
 <body>
-<form id="myForm" action="#" method="post">
-    Add Tag: <textarea name="tag_name"></textarea>
-    <input type="submit" value="Add Tag" />
-</form>
-
+{% include "jumbotron.html" %}
+<div class="container">
+    <div class="form-group">
+        <div class="card text-center" >
+            <div class="card-body">
+                <h2>Tag Name:</h2>
+                <form id="myForm" action="#" method="post">
+                    <textarea id="exampleFormControlTextarea1" name="tag_name"></textarea><br>
+                    <input class="btn btn-success" type="submit" value="Add Tag" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
 </body>
 </html>
