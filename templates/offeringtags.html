@@ -14,7 +14,7 @@
 {% include "jumbotron.html" %}
 {% include "header.html" %}
 <div class="container">
-
+    <h2> Offerings with <b>{{ tag.tag_name  }}</b> tag<h2>
     <div class="row">
         {% for i in taglist %}
             {% if tag.tag_name == i.tag_name  %}

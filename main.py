@@ -19,6 +19,7 @@ from werkzeug.exceptions import BadRequest
 import six
 from google.cloud import vision
 from google.cloud.vision import types
+from sqlalchemy.exc import OperationalError
 
 PROJECT_ID = 'pycharm-194111'
 CLOUD_STORAGE_BUCKET = 'pycharm-194111.appspot.com'
@@ -169,14 +170,14 @@ def load_file(offering_id):
 # https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/vision/cloud-client/detect/detect.py
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>')
 def uploaded_file(offering_id, file_id):
-    pic = session.query(File).filter_by(id=file_id).one()
+    pic = session.query(File).filter_by(id=file_id).first()
     return render_template('uploadedfile.html', pic=pic, file_id=file_id, offering_id=offering_id)
 
 
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>/analyze')
 def analyze_file(offering_id, file_id):
     #offering = session.query(Offering).filter_by(id=offering_id).one()
-    pic = session.query(File).filter_by(id=file_id).one()
+    pic = session.query(File).filter_by(id=file_id).first()
 
     client = vision.ImageAnnotatorClient()
     image = types.Image()
@@ -476,7 +477,11 @@ def getUserID(email):
 def offering():
     offerings = session.query(Offering).all()
     files = session.query(File).all()
-    return render_template('offerings.html', offerings=offerings, files=files)
+    try:
+        return render_template('offerings.html', offerings=offerings, files=files)
+    except OperationalError:
+        session.rollback()
+        return '<h1>Please reload page</h1>'
 
 
 @app.route('/offerings/<offering_location>/')
@@ -553,7 +558,7 @@ def editOffering(offering_id):
 def deleteOffering(offering_id):
     if 'username' not in login_session:
         return redirect('/login')
-    offeringToDelete = session.query(Offering).filter_by(id=offering_id).one()
+    offeringToDelete = session.query(Offering).filter_by(id=offering_id).first()
     if offeringToDelete.user_id != login_session['user_id']:
         return "<script>function myFunction() {alert" \
                "('You are not authorized to delete this offering.');}</script><body onload='myFunction()''>"
@@ -570,7 +575,7 @@ def deleteOffering(offering_id):
 def newTag(offering_id):
     if 'username' not in login_session:
         return redirect('/login')
-    offering = session.query(Offering).filter_by(id=offering_id).one()
+    offering = session.query(Offering).filter_by(id=offering_id).first()
     if request.method == 'POST':
         newTag = Tag(tag_name=request.form['tag_name'].lower(), offering_id=offering.id)
         session.add(newTag)
