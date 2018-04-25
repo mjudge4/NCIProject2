@@ -1,5 +1,5 @@
 //names the current sw cache version to be used
-var staticCacheName = 'babiesgrow-static-v4';
+var staticCacheName = 'babiesgrow-static-v5';
 
 
 //installs the service worker
@@ -8,9 +8,9 @@ self.addEventListener('install', function(event) {
         caches.open(staticCacheName).then(function(cache) {
             return cache.addAll([
                 '/',
-                '/offerings',
+                '/offerings/',
                 '/static/js/offerings.js',
-                '/static/styles.css'
+                '/static/css/bootstrap.min.css'
             ]);
         })
     );
@@ -31,10 +31,19 @@ self.addEventListener('activate', function(event) {
     );
 });
 
+//@ https://jakearchibald.com/2014/offline-cookbook/
 self.addEventListener('fetch', function(event) {
   event.respondWith(
+    // Try the cache
     caches.match(event.request).then(function(response) {
+      // Fall back to network
       return response || fetch(event.request);
+    }).catch(function() {
+      // If both fail, show a generic fallback:
+      return "Oooops, you're offline";
+      // However, in reality you'd have many different
+      // fallbacks, depending on URL & headers.
+      // Eg, a fallback silhouette image for avatars.
     })
   );
 });
@@ -54,5 +63,5 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
-*/
 
+*/

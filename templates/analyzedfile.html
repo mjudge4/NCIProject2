@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
     <!-- Bootstrap CSS -->
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <meta charset="UTF-8">
     <title>Tags</title>
@@ -53,18 +53,16 @@
                     </button>
                 {% endfor %}
             </div>
-
-
         </div>
         <div class="col">
             <div class="row h-100 justify-content-left align-items-center">
                 <a class="btn btn-primary btn-lg" href="{{url_for('offeringDetail', offering_id = offering_id)}}">
                     <h3>View Offering</h3>
                 </a>
-
             </div>
         </div>
     </div>
 </div>
+{% include "footer.html" %}
 </body>
 </html>

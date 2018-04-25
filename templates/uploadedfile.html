@@ -46,21 +46,17 @@
 
 <div class="container">
     <div class="row">
-
-
         <div class="col-sm">
-
+            <h4>Image uploaded!</h4>
             <img src ="{{ pic.image }}">
-
         </div>
         <div class="col">
             <div class="row h-100 justify-content-center align-items-center">
                 <a class="btn btn-primary btn-lg" href="{{url_for('analyze_file', offering_id=offering_id,
                  file_id=file_id)}}" onclick="myFunction()">
-                    <h3>Analyze Offering for Tags</h3>
+                    <h3>Analyze Image for Tags</h3>
                 </a>
             </div>
-
         </div>
     </div>
     <div id="progress">
