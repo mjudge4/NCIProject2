@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb3ebfc5-3722-484e-aef3-45d622f8109d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/offerings.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/offerings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/sw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/analyzedfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/analyzedfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deletefile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deletefile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deleteoffering.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deleteoffering.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deletetag.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deletetag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editoffering.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editoffering.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newoffering.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newoffering.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/newtag.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newtag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/offeringDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/offeringDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/offerings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/offerings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/offeringtags.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/offeringtags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/publicOfferingDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publicOfferingDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/uploadedfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/uploadedfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/uploads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/uploads.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,20 +16,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="publicOfferingDetail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="publicOfferingDetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/publicOfferingDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
+            <state relative-caret-position="157">
+              <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uploadedfile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/uploadedfile.html">
+      <file leaf-file-name="offeringDetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/offeringDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newtag.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/newtag.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="210" column="32" lean-forward="true" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,8 +67,8 @@
       <file leaf-file-name="sw.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="66" selection-end-column="2" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -86,8 +94,8 @@
       <file leaf-file-name="analyzedfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/analyzedfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="6" column="104" lean-forward="true" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
+            <state relative-caret-position="102">
+              <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -99,16 +107,6 @@
               <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="offline.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/offline.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="parent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/parent.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -166,13 +164,13 @@
         <option value="$PROJECT_DIR$/templates/editoffering.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/newoffering.html" />
+        <option value="$PROJECT_DIR$/templates/offeringtags.html" />
+        <option value="$PROJECT_DIR$/static/js/offerings.js" />
+        <option value="$PROJECT_DIR$/templates/uploadedfile.html" />
+        <option value="$PROJECT_DIR$/static/sw.js" />
         <option value="$PROJECT_DIR$/templates/newtag.html" />
         <option value="$PROJECT_DIR$/templates/offeringDetail.html" />
-        <option value="$PROJECT_DIR$/templates/offeringtags.html" />
         <option value="$PROJECT_DIR$/templates/publicOfferingDetail.html" />
-        <option value="$PROJECT_DIR$/static/js/offerings.js" />
-        <option value="$PROJECT_DIR$/static/sw.js" />
-        <option value="$PROJECT_DIR$/templates/uploadedfile.html" />
       </list>
     </option>
   </component>
@@ -194,17 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="NCIProject" type="cbb8eebc:String" user="NCIProject" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,12 +219,23 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="NCIProject" type="cbb8eebc:String" user="NCIProject" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/NCIProject-e1ede6c5887d3d3877bd67600a2fac4e6d04880f" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RecentsManager">
@@ -299,7 +297,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1951417" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19838056" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
@@ -316,6 +314,31 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19838056" />
+      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="App Config Tool" order="8" weight="0.37924865" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="REST Client" order="12" weight="0.425" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -329,6 +352,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/offeringtags.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/uploadedfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/newoffering.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -510,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-553">
-          <caret line="560" column="78" selection-start-line="560" selection-start-column="78" selection-end-line="560" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/upload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -597,20 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newtag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="104" selection-start-line="5" selection-start-column="104" selection-end-line="5" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/offeringDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/offeringlocation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -632,19 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/offline.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parent.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/publicOfferingDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/offerings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -652,17 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="66" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/analyzedfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="6" column="104" lean-forward="true" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
+        <state relative-caret-position="102">
+          <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -670,6 +663,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="210" column="32" lean-forward="true" selection-start-line="210" selection-start-column="32" selection-end-line="210" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newtag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/offeringDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/publicOfferingDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
         </state>
       </provider>
     </entry>

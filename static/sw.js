@@ -8,7 +8,6 @@ self.addEventListener('install', function(event) {
         caches.open(staticCacheName).then(function(cache) {
             return cache.addAll([
                 '/',
-                '/offerings/',
                 '/static/js/offerings.js',
                 '/static/css/bootstrap.min.css'
             ]);

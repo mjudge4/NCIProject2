@@ -12,21 +12,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <style>
-        /* Make the image fully responsive */
+
         .btn btn-info {
-            padding-bottom: 10px;
+            padding: 5px;
         }
         .carousel-inner img {
             height : 650px
         }
 
         .col-sm-8 a{
-        margin-bottom: 5px;
-         }
+            margin-bottom: 5px;
+        }
 
         .row {
             margin-bottom: 5px;
         }
+
 
     </style>
 
@@ -102,7 +103,7 @@
                     </ul>
                 </div>
 
-
+                <br>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1"> Add Comment:</label>
                     <form id="myForm" action="#" method="post">
@@ -119,7 +120,7 @@
         <div class="col-sm-8">
             {% for tag in tags %}
                 <a class="btn btn-info" href="{{ url_for('offeringByTag', tag_id=tag.id) }}">
-                 {{ tag.tag_name}}
+                    {{ tag.tag_name}}
                 </a>
             {% endfor %}
         </div>
