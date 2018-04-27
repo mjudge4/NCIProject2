@@ -22,9 +22,6 @@ CLOUDSQL_PASSWORD = '7Ggda0dqaD0ovIIu'
 CLOUDSQL_DATABASE = 'offerings'
 
 CLOUDSQL_CONNECTION_NAME = 'pycharm-194111:europe-west2:babiesgrowdatabase'
-# Create instance
-Base = declarative_base()
-
 
 # Create instance
 Base = declarative_base()
@@ -131,10 +128,8 @@ class File(Base):
 engine = create_engine('mysql+pymysql://root:7Ggda0dqaD0ovIIu@/offerings?unix_socket=/cloudsql/pycharm-194111:europe-west2:babiesgrowdatabase')
 
 
-#engine = create_engine('mysql+mysqldb://root:password@/offerings?unix_socket=/cloudsql/pycharm-194111:europe-west2:babiesgrow')
 
-
-
+#For testing locally with Cloud SQL Proxy
 #'mysql+pymysql://marc:password@127.0.0.1:8000/offerings'
 
 # Goes into database and creates the tables

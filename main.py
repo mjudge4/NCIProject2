@@ -50,6 +50,7 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+
 # https://stackoverflow.com/questions/46381128/building-progressive-web-apps-using-python-flask
 @app.route('/sw.js', methods=['GET'])
 def sw():
@@ -173,7 +174,7 @@ def uploaded_file(offering_id, file_id):
     pic = session.query(File).filter_by(id=file_id).first()
     return render_template('uploadedfile.html', pic=pic, file_id=file_id, offering_id=offering_id)
 
-
+# Calls Vision API and creates tags
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>/analyze')
 def analyze_file(offering_id, file_id):
     #offering = session.query(Offering).filter_by(id=offering_id).one()
@@ -221,6 +222,8 @@ def uploadedfile(filename):
 
 # Code for login follows the Udacity tutorial Authentication & Authorization: OAuth
 # @reference http://https://classroom.udacity.com/courses/ud330/lessons/3967218625/concepts/39636486150923
+# https://github.com/udacity/ud330/tree/master/Lesson4/step2
+
 
 # Create anti-forgery state token
 @app.route('/login')
@@ -313,9 +316,8 @@ def fbdisconnect():
     result = h.request(url, 'DELETE')[1]
     return "You have been logged out"
 
+
 # Disconnect based on provider
-
-
 @app.route('/disconnect')
 def disconnect():
     if 'provider' in login_session:
@@ -469,21 +471,23 @@ def getUserID(email):
         return None
 
 # Code for structuring the data and developing  API endpoints
-# inspired by the Udacity course  - Full Stack Foundations
+# inspired by the Udacity course  - Full Stack Foundations https://classroom.udacity.com/courses/ud088
 
 
+# Home page
 @app.route('/')
 @app.route('/offerings/')
 def offering():
-    offerings = session.query(Offering).all()
-    files = session.query(File).all()
     try:
+        offerings = session.query(Offering).all()
+        files = session.query(File).all()
         return render_template('offerings.html', offerings=offerings, files=files)
     except OperationalError:
         session.rollback()
         return '<h1>Please reload page</h1>'
 
 
+# Filter offerings by location
 @app.route('/offerings/<offering_location>/')
 def offeringLocation(offering_location):
     offerings = session.query(Offering).filter_by(location=offering_location)
@@ -492,6 +496,7 @@ def offeringLocation(offering_location):
                            offering_location=offering_location)
 
 
+# Filter offerings by Tag
 @app.route('/offerings/tag/<int:tag_id>/')
 def offeringByTag(tag_id):
     tag = session.query(Tag).filter_by(id=tag_id).one()
@@ -501,12 +506,14 @@ def offeringByTag(tag_id):
     return render_template('offeringtags.html', offerings=offerings, files=files, tag=tag, taglist=taglist)
 
 
+# JSON list
 @app.route('/offerings/JSON')
 def offeringJSON():
     offerings = session.query(Offering).all()
     return jsonify(offerings=[i.serialize for i in offerings])
 
 
+# My Offerings page - needs work
 @app.route('/offerings/user/<int:user_id>/')
 def offeringsByUser(user_id):
     user = session.query(User).filter_by(id=user_id).one()
@@ -515,6 +522,7 @@ def offeringsByUser(user_id):
     return render_template('offerings.html', offerings=offerings, files=files, user=user)
 
 
+# Display individual offerings
 @app.route('/offerings/<int:offering_id>/')
 def offeringDetail(offering_id):
     offering = session.query(Offering).filter_by(id=offering_id).one()
@@ -530,7 +538,7 @@ def offeringDetail(offering_id):
         return render_template('offeringDetail.html', offering=offering, tags=tags, comments=comments,
                                offering_id=offering_id, files=files, owner=owner, commenter=commenter)
 
-
+# Display individual offerings in JSON
 @app.route('/offerings/<int:offering_id>/JSON')
 def offeringDetailJSON(offering_id):
     offering = session.query(Offering).filter_by(id=offering_id).one()
@@ -633,6 +641,7 @@ def deleteFile(offering_id, file_id):
         return redirect(url_for('offering', offering_id=offering_id))
     else:
         return render_template('deletefile.html', file=fileToDelete, offering_id=offering_id)
+
 
 if __name__ == '__main__':
     app.debug = True

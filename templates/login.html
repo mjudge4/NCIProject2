@@ -16,7 +16,7 @@
 
 {% include "jumbotron.html" %}
 
-
+//@ source https://classroom.udacity.com/courses/ud330 https://github.com/udacity/ud330/tree/master/Lesson4/step2
 <body class="container">
 
 <div class="row justify-content-center align-items-center">
@@ -55,7 +55,7 @@
                     success: function(result) {
                         // Handle or verify the server's response.
                         if (result) {
-                            $('#result').html('Welcome back!</br>'+ result + '</br>Redirecting to home page...')
+                            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting to home page...')
                             setTimeout(function() {
                                 window.location.href = "/offerings/";
                             }, 4000);
@@ -113,7 +113,7 @@
                     success: function(result) {
                         // Handle or verify the server response if necessary.
                         if (result) {
-                            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+                            $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting to homepage...')
                             setTimeout(function() {
                                 window.location.href = "/offerings/";
                             }, 4000);
