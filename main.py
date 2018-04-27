@@ -174,6 +174,7 @@ def uploaded_file(offering_id, file_id):
     pic = session.query(File).filter_by(id=file_id).first()
     return render_template('uploadedfile.html', pic=pic, file_id=file_id, offering_id=offering_id)
 
+
 # Calls Vision API and creates tags
 @app.route('/offerings/<int:offering_id>/new/file/<int:file_id>/analyze')
 def analyze_file(offering_id, file_id):
@@ -212,6 +213,7 @@ def analyze_file(offering_id, file_id):
                 session.commit()
                 tags = session.query(Tag).filter_by(offering_id=offering_id).all()
     return render_template('analyzedfile.html', pic=pic, tags=tags, file_id=file_id, offering_id=offering_id)
+
 
 # http://flask.pocoo.org/docs/0.12/patterns/fileuploads/
 # Return uploaded file code from Flask docs
